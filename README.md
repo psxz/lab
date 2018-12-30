@@ -148,16 +148,15 @@ software libraries, which we ship in several different ways:
  * Several additional libraries are required but are not shipped in any form;
    they must be present on your system:
    * SDL 2
-   * Lua 5.1 (later versions might work, too)
    * gettext (required by `glib`)
    * OpenGL: A hardware driver and library are needed for hardware-accelerated
      human play. The headless library that machine learning agents will want to
      use can use either hardware-accelerated rendering via EGL or GLX or
      software rendering via OSMesa, depending on the `--define headless=...`
      build setting.
-   * Python 2.7 (other versions might work, too) with NumPy, PIL. (A few
-     tests require a NumPy version of at least 1.8.) Python 3 is supported
-     experimentally.
+   * Python 2.7 (other versions might work, too) with NumPy, PIL. (A few tests
+     require a NumPy version of at least 1.8.) Python 3 (at least 3.5) is
+     supported experimentally.
 
 The build rules are using a few compiler settings that are specific to GCC. If
 some flags are not recognized by your compiler (typically those would be

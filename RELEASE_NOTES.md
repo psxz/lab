@@ -12,10 +12,21 @@
     log messages are emitted via the setting 'logLevel'.
 4.  Update the ioq3 upstream code to the [latest
     state](https://github.com/ioquake/ioq3/tree/29db64070aa0bae49953bddbedbed5e317af48ba).
+5.  Lua 5.1 is now downloaded and built from source, and is thus no longer a
+    required local dependency.
+6.  A minimal version of the "realpath" utility is now bundled with the code,
+    and thus "realpath" is no longer a required local dependency.
 
 ### Bug Fixes:
 
 1.  Prevent missing sounds from causing clients to disconnect.
+2.  Fix a bug in the call of the theme callback 'placeFloorModels', which had
+    caused an "'index' is missing" error during compilation of text levels with
+    texture sets that use floor models, such as MINESWEEPER, GO, and PACMAN.
+3.  Fix bug where levels 'keys_doors_medium', 'keys_doors_random' and
+    'rooms_keys_doors_puzzle' would not accept the common 'logLevel' setting.
+4.  Expose a 'demofiles' command line flag for the Python random agent, without
+    which the agent was not able to record or play back demos.
 
 ## release-2018-06-20 June 2018 release
 

@@ -10,8 +10,6 @@ language: c++
 addons:
   apt:
     packages:
-      - lua5.1
-      - liblua5.1-0-dev
       - libffi-dev
       - gettext
       - freeglut3-dev
@@ -20,7 +18,6 @@ addons:
       - python-dev
       - python-numpy
       - python-pil
-      - realpath
 
 before_install:
   - curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
